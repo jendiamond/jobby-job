@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @jobby_job.company %>
+</p>
+
+<p>
+  <strong>Street address:</strong>
+  <%= @jobby_job.street_address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @jobby_job.city %>
+</p>
+
+<p>
+  <strong>Zip code:</strong>
+  <%= @jobby_job.zip_code %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @jobby_job.contact %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @jobby_job.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @jobby_job.email %>
+</p>
+
+<p>
+  <strong>Job posting url:</strong>
+  <%= @jobby_job.job_posting_url %>
+</p>
+
+<p>
+  <strong>Job posting description:</strong>
+  <%= @jobby_job.job_posting_description %>
+</p>
+
+<p>
+  <strong>Resume to be sent:</strong>
+  <%= @jobby_job.resume_to_be_sent %>
+</p>
+
+<p>
+  <strong>Resume actually sent:</strong>
+  <%= @jobby_job.resume_actually_sent %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @jobby_job.description %>
+</p>
+
+<p>
+  <strong>Follow up:</strong>
+  <%= @jobby_job.follow_up %>
+</p>
+
+<p>
+  <strong>Challenge:</strong>
+  <%= @jobby_job.challenge %>
+</p>
+
+<p>
+  <strong>Interview:</strong>
+  <%= @jobby_job.interview %>
+</p>
+
+<p>
+  <strong>Interview info:</strong>
+  <%= @jobby_job.interview_info %>
+</p>
+
+<%= link_to 'Edit', edit_jobby_job_path(@jobby_job) %> |
+<%= link_to 'Back', jobby_jobs_path %>
