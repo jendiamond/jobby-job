@@ -1,48 +1,38 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Company:</strong>
+<div style="width:600px; border:solid 1px #ccc; padding: 10px;">
+<h1>
   <%= @jobby_job.company %>
+</h1>
+
+<h2>
+  <%= @jobby_job.job_title %>
+</h2>
+
+<h3>
+  <%= link_to @jobby_job.website, @jobby_job.website %> | 
+  <%= @jobby_job.city %> | 
+  <strong>Rating:</strong>
+  <%= @jobby_job.rating %> | <a href="followup">Follow Up</a>
+</h3>
+<p style="border:solid 1px #ccc; padding: 10px;">
+<%= link_to 'Edit', edit_jobby_job_path(@jobby_job) %> |
+<%= link_to 'Destroy', jobby_job_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
+<%= link_to 'Back', jobby_jobs_path %>
 </p>
 
-<p>
-  <strong>Street address:</strong>
-  <%= @jobby_job.street_address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @jobby_job.city %>
-</p>
-
-<p>
-  <strong>Zip code:</strong>
-  <%= @jobby_job.zip_code %>
-</p>
-
-<p>
+<p style="border:solid 1px #ccc; padding: 10px;">
   <strong>Contact:</strong>
-  <%= @jobby_job.contact %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @jobby_job.phone %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @jobby_job.email %>
+  <%= @jobby_job.contact %><br />
+  <%= @jobby_job.phone %><br />
+  <%= @jobby_job.email %><br />
+  <%= @jobby_job.street_address %><br />
+  <%= @jobby_job.city %><br />
+  <%= @jobby_job.zip_code %><br />
 </p>
 
 <p>
   <strong>Job posting url:</strong>
   <%= @jobby_job.job_posting_url %>
-</p>
-
-<p>
-  <strong>Job posting description:</strong>
-  <%= @jobby_job.job_posting_description %>
 </p>
 
 <p>
@@ -59,9 +49,10 @@
   <strong>Description:</strong>
   <%= @jobby_job.description %>
 </p>
-
-<p>
-  <strong>Follow up:</strong>
+<hr />
+<h2 id="followup">Follow up</h2>
+  <p>
+  <strong>Follow up email:</strong>
   <%= @jobby_job.follow_up %>
 </p>
 
@@ -80,5 +71,5 @@
   <%= @jobby_job.interview_info %>
 </p>
 
-<%= link_to 'Edit', edit_jobby_job_path(@jobby_job) %> |
-<%= link_to 'Back', jobby_jobs_path %>
+
+</div>

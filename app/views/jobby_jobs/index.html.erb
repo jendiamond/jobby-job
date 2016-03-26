@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Jobby Jobs</h1>
+<h1>Listing Jobby Jobs</h1>
 
 <table>
   <thead>
     <tr>
       <th>Company</th>
+      <th>Job title</th>
+      <th>Rating</th>
+      <th>City</th>
       <th>Resume to be sent</th>
-      <th>Resume actually sent</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +17,11 @@
   <tbody>
     <% @jobby_jobs.each do |jobby_job| %>
       <tr>
-        <td><%= jobby_job.company %></td>
+        <td><%= link_to jobby_job.company, jobby_job %></td>
+        <td><%= jobby_job.job_title %></td>
+        <td><%= jobby_job.rating %></td>
+        <td><%= jobby_job.city %></td>
         <td><%= jobby_job.resume_to_be_sent %></td>
-        <td><%= jobby_job.resume_actually_sent %></td>
         <td><%= link_to 'Show', jobby_job %></td>
         <td><%= link_to 'Edit', edit_jobby_job_path(jobby_job) %></td>
         <td><%= link_to 'Destroy', jobby_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -28,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Jobby-Job', new_jobby_job_path %>
+<%= link_to 'New Jobby job', new_jobby_job_path %>

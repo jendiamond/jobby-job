@@ -16,6 +16,18 @@
     <%= f.text_field :company %>
   </div>
   <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :website %><br>
+    <%= f.text_field :website %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating %>
+  </div>
+  <div class="field">
     <%= f.label :street_address %><br>
     <%= f.text_field :street_address %>
   </div>
@@ -42,10 +54,6 @@
   <div class="field">
     <%= f.label :job_posting_url %><br>
     <%= f.text_field :job_posting_url %>
-  </div>
-  <div class="field">
-    <%= f.label :job_posting_description %><br>
-    <%= f.text_area :job_posting_description %>
   </div>
   <div class="field">
     <%= f.label :resume_to_be_sent %><br>

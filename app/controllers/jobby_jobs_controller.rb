@@ -69,6 +69,6 @@ class JobbyJobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def jobby_job_params
-      params.require(:jobby_job).permit(:company, :street_address, :city, :zip_code, :contact, :phone, :email, :job_posting_url, :job_posting_description, :resume_to_be_sent, :resume_actually_sent, :description, :follow_up, :challenge, :interview, :interview_info)
+      params.require(:jobby_job).permit(:company, :job_title, :website, :rating, :street_address, :city, :zip_code, :contact, :phone, :email, :job_posting_url, :resume_to_be_sent, :resume_actually_sent, :description, :follow_up, :challenge, :interview, :interview_info)
     end
 end

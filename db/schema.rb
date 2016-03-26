@@ -11,10 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325230308) do
+ActiveRecord::Schema.define(version: 20160326000733) do
 
   create_table "jobby_jobs", force: :cascade do |t|
     t.string   "company"
+    t.string   "job_title"
+    t.string   "website"
+    t.integer  "rating"
     t.string   "street_address"
     t.string   "city"
     t.integer  "zip_code"
@@ -22,7 +25,6 @@ ActiveRecord::Schema.define(version: 20160325230308) do
     t.string   "phone"
     t.string   "email"
     t.string   "job_posting_url"
-    t.text     "job_posting_description"
     t.date     "resume_to_be_sent"
     t.date     "resume_actually_sent"
     t.text     "description"
@@ -30,8 +32,8 @@ ActiveRecord::Schema.define(version: 20160325230308) do
     t.text     "challenge"
     t.datetime "interview"
     t.text     "interview_info"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
 end
