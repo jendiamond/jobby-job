@@ -1,4 +1,4 @@
-<div style="border:solid 1px #ccc; background:#C1CDCD ">
+<div id=form>
 <%= form_for(@jobby_job) do |f| %> 
   <% if @jobby_job.errors.any? %>
     <div id="error_explanation">
@@ -11,6 +11,13 @@
       </ul>
     </div>
   <% end %>
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+</div>
 
 <div class="row" style="padding:5px 20px 5px 10px;">
   <div class="three columns">
@@ -126,7 +133,7 @@
 
   <div class="three columns">
     <div class="field">
-    <%= f.label :resume_actually_sent %><%= f.date_select :resume_actually_sent %>
+    <%= f.label :resume_sent %><%= f.date_select :resume_actually_sent %>
     </div>
   </div>
 
@@ -139,12 +146,6 @@
 </div>
 
 
-<div class="row" style="padding:5px 20px 5px 10px;">
-  <div class="three columns">
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-  </div>
-</div>
+
 <% end %>
 </div>

@@ -1,4 +1,8 @@
-<h1>Editing Jobby Job www</h1>
-<%= link_to 'Show', @jobby_job %> |
-<%= link_to 'Back', jobby_jobs_path %>
+<div id='nvbr'>
+  <%= link_to 'JobbyJob', root_url %> &nbsp; &nbsp;
+  Edit Jobby Job &nbsp; &nbsp;
+  <%= link_to 'Cancel', root_url, class: 'button button-primary' %>
+  <%= link_to 'Destroy', jobby_job_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button-primary' %>
+</div>
+
 <%= render 'form' %>

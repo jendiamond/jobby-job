@@ -1,72 +1,68 @@
-<p id="notice"><%= notice %></p>
-<div style="padding: 20px;">
-<h2>
-  <%= @jobby_job.company %>
-</h2>
+<div id='nvbr'>
+  <%= link_to 'JobbyJob', root_url %>
+  <%= link_to 'Edit', edit_jobby_job_path(@jobby_job), class: 'button button-primary' %>
+  <%= link_to 'Destroy', jobby_job_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button-primary' %>
+</div>
 
-<h3>
-  <%= @jobby_job.job_title %>
-</h3>
+<div id='showpage'>
+  <h2>
+    <%= @jobby_job.company %>
+  </h2>
 
-<p style="border:solid 1px #ccc; padding: 5px; background: #ccc;">
-<%= link_to 'Edit', edit_jobby_job_path(@jobby_job) %> |
-<%= link_to 'Destroy', jobby_job_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'Back', jobby_jobs_path %>
-</p>
+  <h4>
+    <%= @jobby_job.job_title %>
+  </h4>
 
-<h6>
-  <strong><%= link_to @jobby_job.website, @jobby_job.website %> | 
-  <%= @jobby_job.city %></strong> | 
-  <strong>Rating:
-  <%= @jobby_job.rating %></strong> | <a href="followup">Follow Up</a>
-</h6>
+  <p style="background: #C1CDCD; font-family:raleway; font-size:16px; padding: 5px 10px;">
+    Resume Sent:
+    <%= @jobby_job.resume_actually_sent.strftime("%a, %b %d") %> | 
+    <%= link_to @jobby_job.website, @jobby_job.website %> | 
+    <%= @jobby_job.city %> | 
+    Rating:
+    <%= @jobby_job.rating %> | <a href="#followup">Follow Up</a>
+  </p>
 
-<p style="border:solid 1px #ccc; padding: 10px;">
-  <strong>Contact:</strong>
-  <%= @jobby_job.contact %><br />
-  <%= @jobby_job.phone %><br />
-  <%= @jobby_job.email %><br />
-  <%= @jobby_job.street_address %><br />
-  <%= @jobby_job.city %><br />
-  <%= @jobby_job.zip_code %><br />
-</p>
-
-<p>
-  <strong>Job posting url:</strong>
-  <%= @jobby_job.job_posting_url %>
-</p>
-
-<p>
-  <strong>Resume to be sent:</strong><%= @jobby_job.resume_to_be_sent %> |
-<strong>Resume actually sent:</strong>
-  <%= @jobby_job.resume_actually_sent %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @jobby_job.description %>
-</p>
-<hr />
-<h2 id="followup">Follow up</h2>
   <p>
-  <strong>Follow up email:</strong>
-  <%= @jobby_job.follow_up %>
-</p>
+    <strong>Job posting url:</strong>
+    <%= @jobby_job.job_posting_url %> 
+  </p>
 
-<p>
-  <strong>Challenge:</strong>
-  <%= @jobby_job.challenge %>
-</p>
+  <p style="border:solid 1px #ccc; padding: 10px;">
+    <strong>Contact:</strong><%= @jobby_job.contact %><br />
+    <strong>Phone:</strong><%= @jobby_job.phone %><br />
+    <strong>Email:</strong><%= @jobby_job.email %><br />
+    <strong>Address:</strong><%= @jobby_job.street_address %><br />
+    <%= @jobby_job.city %><br />
+    <%= @jobby_job.zip_code %><br />
+  </p>
 
-<p>
-  <strong>Interview:</strong>
-  <%= @jobby_job.interview %>
-</p>
+  <div style="border:solid 1px #ccc; padding: 10px;">
+    <p>
+      <strong>Job Description:</strong>
+      <%= simple_format @jobby_job.description %>
+    </p>
+  </div>
 
-<p>
-  <strong>Interview info:</strong>
-  <%= @jobby_job.interview_info %>
-</p>
+  <hr />
 
+  <h2 id="followup">Follow up</h2>
+  <p>
+    <strong>Follow up email:</strong>
+    <%= simple_format @jobby_job.follow_up %>
+   </p>
 
+   <p>
+     <strong>Challenge:</strong>
+     <%= simple_format @jobby_job.challenge %>
+  </p>
+
+  <p>
+     <strong>Interview:</strong>
+     <%= simple_format @jobby_job.interview %>
+  </p>
+
+   <p>
+     <strong>Interview info:</strong>
+     <%= simple_format @jobby_job.interview_info %>
+  </p>
 </div>

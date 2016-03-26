@@ -1,16 +1,20 @@
 <div style="padding: 20px;">
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Jobby Jobs</h1>
+<div id='nvbr'>
+  <%= link_to 'JobbyJob', root_url %> &nbsp; &nbsp;
+  <%= link_to 'New Jobby job', new_jobby_job_path, class: 'button button-primary' %>
+</div>
+
+<h4>Keep track of your job search</h4>
 
 <table>
   <thead>
     <tr>
-      <th>Company</th>
+      <th  style="font-family:raleway;">Company</th>
       <th>Job title</th>
       <th>Rating</th>
       <th>City</th>
-      <th>Resume to be sent</th>
+      <th>Resume sent</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,13 +26,10 @@
         <td><%= jobby_job.job_title %></td>
         <td><%= jobby_job.rating %></td>
         <td><%= jobby_job.city %></td>
-        <td><%= jobby_job.resume_to_be_sent %></td>
+        <td><%= jobby_job.resume_to_be_sent.strftime("%a, %b %d, %y") %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Jobby job', new_jobby_job_path %>
 </div>
