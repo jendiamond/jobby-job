@@ -1,3 +1,4 @@
+<div style="padding: 20px;">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Jobby Jobs</h1>
@@ -22,9 +23,6 @@
         <td><%= jobby_job.rating %></td>
         <td><%= jobby_job.city %></td>
         <td><%= jobby_job.resume_to_be_sent %></td>
-        <td><%= link_to 'Show', jobby_job %></td>
-        <td><%= link_to 'Edit', edit_jobby_job_path(jobby_job) %></td>
-        <td><%= link_to 'Destroy', jobby_job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +31,4 @@
 <br>
 
 <%= link_to 'New Jobby job', new_jobby_job_path %>
+</div>

@@ -1,24 +1,25 @@
 <p id="notice"><%= notice %></p>
-<div style="width:600px; border:solid 1px #ccc; padding: 10px;">
-<h1>
-  <%= @jobby_job.company %>
-</h1>
-
+<div style="padding: 20px;">
 <h2>
-  <%= @jobby_job.job_title %>
+  <%= @jobby_job.company %>
 </h2>
 
 <h3>
-  <%= link_to @jobby_job.website, @jobby_job.website %> | 
-  <%= @jobby_job.city %> | 
-  <strong>Rating:</strong>
-  <%= @jobby_job.rating %> | <a href="followup">Follow Up</a>
+  <%= @jobby_job.job_title %>
 </h3>
-<p style="border:solid 1px #ccc; padding: 10px;">
+
+<p style="border:solid 1px #ccc; padding: 5px; background: #ccc;">
 <%= link_to 'Edit', edit_jobby_job_path(@jobby_job) %> |
 <%= link_to 'Destroy', jobby_job_path, method: :delete, data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', jobby_jobs_path %>
 </p>
+
+<h6>
+  <strong><%= link_to @jobby_job.website, @jobby_job.website %> | 
+  <%= @jobby_job.city %></strong> | 
+  <strong>Rating:
+  <%= @jobby_job.rating %></strong> | <a href="followup">Follow Up</a>
+</h6>
 
 <p style="border:solid 1px #ccc; padding: 10px;">
   <strong>Contact:</strong>
@@ -36,12 +37,8 @@
 </p>
 
 <p>
-  <strong>Resume to be sent:</strong>
-  <%= @jobby_job.resume_to_be_sent %>
-</p>
-
-<p>
-  <strong>Resume actually sent:</strong>
+  <strong>Resume to be sent:</strong><%= @jobby_job.resume_to_be_sent %> |
+<strong>Resume actually sent:</strong>
   <%= @jobby_job.resume_actually_sent %>
 </p>
 

@@ -1,4 +1,5 @@
-<%= form_for(@jobby_job) do |f| %>
+<div style="border:solid 1px #ccc; background:#C1CDCD ">
+<%= form_for(@jobby_job) do |f| %> 
   <% if @jobby_job.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@jobby_job.errors.count, "error") %> prohibited this jobby_job from being saved:</h2>
@@ -11,79 +12,139 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :company %><br>
-    <%= f.text_field :company %>
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :company %><%= f.text_field :company %> 
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :job_title %><br>
-    <%= f.text_field :job_title %>
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :job_title %><%= f.text_field :job_title %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :website %><br>
-    <%= f.text_field :website %>
+  
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :website %><%= f.text_field :website %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+</div>
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :rating %><%= f.number_field :rating %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :street_address %><br>
-    <%= f.text_field :street_address %>
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :street_address %><%= f.text_field :street_address %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :city %><%= f.text_field :city %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :zip_code %><br>
-    <%= f.number_field :zip_code %>
+</div>
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :zip_code %><%= f.number_field :zip_code %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :contact %><br>
-    <%= f.text_field :contact %>
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :contact %><%= f.text_field :contact %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :phone %><%= f.text_field :phone %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+</div>
+
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="four columns">
+    <div class="field">
+      <%= f.label :email %><%= f.text_field :email %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :job_posting_url %><br>
-    <%= f.text_field :job_posting_url %>
+
+  <div class="four columns">
+    <div class="field">
+      <%= f.label :job_posting_url %><%= f.text_field :job_posting_url %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :resume_to_be_sent %><br>
-    <%= f.date_select :resume_to_be_sent %>
+</div>
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="twelve columns">
+    <div class="field">
+      <%= f.label :description %><%= f.text_area :description %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :resume_actually_sent %><br>
-    <%= f.date_select :resume_actually_sent %>
+</div>
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :follow_up %><%= f.text_area :follow_up %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+
+
+  <div class="three columns">
+    <div class="field">
+    <%= f.label :challenge %><%= f.text_area :challenge %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :follow_up %><br>
-    <%= f.text_area :follow_up %>
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :interview_info %><%= f.text_area :interview_info %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :challenge %><br>
-    <%= f.text_area :challenge %>
+</div>
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="field">
+    <%= f.label :resume_to_be_sent %><%= f.date_select :resume_to_be_sent %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :interview %><br>
-    <%= f.datetime_select :interview %>
+
+  <div class="three columns">
+    <div class="field">
+    <%= f.label :resume_actually_sent %><%= f.date_select :resume_actually_sent %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :interview_info %><br>
-    <%= f.text_area :interview_info %>
+
+
+  <div class="three columns">
+    <div class="field">
+      <%= f.label :interview %><%= f.datetime_select :interview %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+</div>
+
+
+<div class="row" style="padding:5px 20px 5px 10px;">
+  <div class="three columns">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
+</div>
 <% end %>
+</div>
