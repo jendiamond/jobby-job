@@ -1,28 +1,20 @@
 class JobbyJobsController < ApplicationController
   before_action :set_jobby_job, only: [:show, :edit, :update, :destroy]
 
-  # GET /jobby_jobs
-  # GET /jobby_jobs.json
   def index
     @jobby_jobs = JobbyJob.all
   end
 
-  # GET /jobby_jobs/1
-  # GET /jobby_jobs/1.json
   def show
   end
 
-  # GET /jobby_jobs/new
   def new
     @jobby_job = JobbyJob.new
   end
 
-  # GET /jobby_jobs/1/edit
   def edit
   end
 
-  # POST /jobby_jobs
-  # POST /jobby_jobs.json
   def create
     @jobby_job = JobbyJob.new(jobby_job_params)
 
@@ -37,8 +29,6 @@ class JobbyJobsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /jobby_jobs/1
-  # PATCH/PUT /jobby_jobs/1.json
   def update
     respond_to do |format|
       if @jobby_job.update(jobby_job_params)
@@ -51,8 +41,6 @@ class JobbyJobsController < ApplicationController
     end
   end
 
-  # DELETE /jobby_jobs/1
-  # DELETE /jobby_jobs/1.json
   def destroy
     @jobby_job.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class JobbyJobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_jobby_job
       @jobby_job = JobbyJob.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def jobby_job_params
       params.require(:jobby_job).permit(:company, :job_title, :website, :rating, :street_address, :city, :zip_code, :contact, :phone, :email, :job_posting_url, :resume_to_be_sent, :resume_actually_sent, :description, :follow_up, :challenge, :interview, :interview_info)
     end
