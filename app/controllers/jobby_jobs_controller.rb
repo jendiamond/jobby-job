@@ -26,7 +26,7 @@ class JobbyJobsController < ApplicationController
 
   def update
     if @jobby_job.update(jobby_job_params)
-      redirect_to '/'
+      redirect_to @jobby_job
     else
       render :edit
       flash[:notice] = "Workout was not edited."
