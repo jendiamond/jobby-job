@@ -7,7 +7,7 @@ class CreateJobbyJobs < ActiveRecord::Migration
       t.integer :rating
       t.string :street_address
       t.string :city
-      t.integer :zip_code
+      t.string :zip_code
       t.string :contact
       t.string :phone
       t.string :email

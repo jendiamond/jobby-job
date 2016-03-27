@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20160326000733) do
     t.integer  "rating"
     t.string   "street_address"
     t.string   "city"
-    t.integer  "zip_code"
+    t.string   "zip_code"
     t.string   "contact"
     t.string   "phone"
     t.string   "email"

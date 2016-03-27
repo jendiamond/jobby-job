@@ -19,19 +19,15 @@
     <%= link_to @jobby_job.website, @jobby_job.website %> | 
     <%= @jobby_job.city %> | 
     Rating:
-    <%= @jobby_job.rating %> | <a href="#followup">Follow Up</a>
-  </p>
-
-  <p>
-    <strong>Job posting url:</strong>
-    <%= @jobby_job.job_posting_url %> 
+    <%= @jobby_job.rating %> | <a href="#followup">Follow Up</a> | 
+    <%= link_to 'Job Posting Link', @jobby_job.job_posting_url %>
   </p>
 
   <p style="border:solid 1px #ccc; padding: 10px;">
-    <strong>Contact:</strong><%= @jobby_job.contact %><br />
-    <strong>Phone:</strong><%= @jobby_job.phone %><br />
-    <strong>Email:</strong><%= @jobby_job.email %><br />
-    <strong>Address:</strong><%= @jobby_job.street_address %><br />
+    <strong>Contact: </strong><%= @jobby_job.contact %><br />
+    <strong>Phone: </strong><%= @jobby_job.phone %><br />
+    <strong>Email: </strong><%= @jobby_job.email %><br />
+    <strong>Address: </strong><%= @jobby_job.street_address %><br />
     <%= @jobby_job.city %><br />
     <%= @jobby_job.zip_code %><br />
   </p>
