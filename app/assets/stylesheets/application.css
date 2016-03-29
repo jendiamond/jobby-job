@@ -1,9 +1,10 @@
 /*
- *
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,300,800);
+
 
 body {
   background: #e8e2de;
@@ -33,4 +34,9 @@ div#nvbr {
 
 div#showpage {
   padding: 5px 20px;
+}
+
+.text_area#jobby_job_description {
+  width: 100px;
+  height: 100px;
 }

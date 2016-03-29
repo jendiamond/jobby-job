@@ -14,8 +14,10 @@
   </h4>
 
   <p style="background: #C1CDCD; font-family:raleway; font-size:16px; padding: 5px 10px;">
+    Deadline: 
+    <%= @jobby_job.resume_to_be_sent %> | 
     Resume Sent:
-    <%= @jobby_job.resume_actually_sent.strftime("%a, %b %d") %> | 
+    <%= @jobby_job.resume_actually_sent %> | 
     <%= link_to @jobby_job.website, @jobby_job.website %> | 
     <%= @jobby_job.city %> | 
     Rating:
