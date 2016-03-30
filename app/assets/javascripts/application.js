@@ -1,7 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery-ui
+//= require jquery-ui/datepicker
 //= require_tree .
 
 $(document).on("page:load ready", function(){
